@@ -1,49 +1,16 @@
-# Init Zero ⚛️ - Library Template 🏫👥
+# Jaypie CDK ☃️
 
-## ✏️ Repository Naming Conventions
-
-* `SPONSOR-PROJECT` most deliverable projects, even if the GitHub organization is `SPONSOR`. I.e., `company-PROJECT`
-* `hello-` simple demonstrations of a single technology
-* `lib-` libraries, even internal, if they are general purpose
-* `sandbox-` experiments or `poc-` proof of concept, a sandbox you want to preserve
-* `template-` blueprints for future projects
-* `toy-` educational projects
-
-## 📋 Setup
-
-1. Run `./bin/init`
-2. Run `npm run init:deploy` to add the deploy GitHub Actions workflow
-    * This relies on `secrets.NPM_TOKEN` being accessible during GitHub Actions
-3. Write a decent README. Use the sample readme below
-4. Commit
-
-_`init` will set the package name_
-
-## 📝 Changelog
-
-| Date       | Version | Summary        |
-| ---------- | ------- | -------------- |
-|   3/7/2024 |   0.1.0 | Stable version used for @jaypie/core |
-|   3/4/2024 |   0.0.1 | Initial commit |
-
-## 📎 Appendix
-
-### Sample Readme 📄
-
-* Search for `TODO` for customization points
-
-```markdown
-# Initial JavaScript Library 🐙
-
-TODO: update the project header and optionally write a description here
+AWS CDK utilities for Jaypie
 
 ## 📋 Usage
 
+`@jaypie/cdk` is an optional package that should be installed alongside the main `jaypie` package.
+
 ### Installation
 
-    ```bash
-    npm install MY_INITIAL_PACKAGE # TODO: rename this
-    ```
+```bash
+npm install jaypie @jaypie/cdk
+```
 
 ### Example
 
@@ -57,8 +24,7 @@ TODO: Reference should be a complete list of everything in the package
 
 | Date       | Version | Summary        |
 | ---------- | ------- | -------------- |
-| TODO: DATE |   0.0.1 | Initial commit |
-```
+|  3/30/2024 |   0.0.1 | Initial commit |
 
 ## 📜 License
 
