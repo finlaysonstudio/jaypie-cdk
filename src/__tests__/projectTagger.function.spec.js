@@ -1,16 +1,15 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
-import { CDK } from "@jaypie/core";
+const { CDK } = require("../constants.js");
 
 // Subject
-import projectTagger from "../projectTagger.function.js";
+const projectTagger = require("../projectTagger.function.js");
 
 //
 //
 // Mock modules
 //
 
-const add = vi.fn();
-const of = vi.fn(() => ({ add }));
+const add = jest.fn();
+const of = jest.fn(() => ({ add }));
 const cdk = {
   Tags: {
     of,
@@ -18,7 +17,7 @@ const cdk = {
 };
 
 afterEach(() => {
-  vi.clearAllMocks();
+  jest.clearAllMocks();
 });
 
 //
@@ -56,8 +55,8 @@ describe("ProjectTagger Function", () => {
     expect(add).toHaveBeenCalledWith(CDK.TAG.STACK, "MOCK_STACK_NAME");
   });
   it("Will not tag stackName if not passed", () => {
-    const add = vi.fn();
-    const of = vi.fn(() => ({ add }));
+    const add = jest.fn();
+    const of = jest.fn(() => ({ add }));
     const cdk = {
       Tags: {
         of,
@@ -79,6 +78,7 @@ describe("ProjectTagger Function", () => {
         stackName: "MOCK_STACK_NAME",
       });
     } catch (error) {
+      // eslint-disable-next-line jest/no-conditional-expect
       expect(error).toBeJaypieError();
     }
     expect.assertions(1);
@@ -90,6 +90,7 @@ describe("ProjectTagger Function", () => {
         stackName: "MOCK_STACK_NAME",
       });
     } catch (error) {
+      // eslint-disable-next-line jest/no-conditional-expect
       expect(error).toBeJaypieError();
     }
     expect.assertions(1);

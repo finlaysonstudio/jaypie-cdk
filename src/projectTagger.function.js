@@ -1,6 +1,5 @@
-import { CDK, ConfigurationError } from "@jaypie/core";
-
-const { TAG } = CDK;
+const { CDK } = require("./constants.js");
+const { ConfigurationError } = require("@knowdev/errors");
 
 export default ({ cdk, stack, stackName } = {}) => {
   if (!cdk) {
@@ -14,28 +13,28 @@ export default ({ cdk, stack, stackName } = {}) => {
 
   if (process.env.PROJECT_COMMIT && process.env.PROJECT_COMMIT.length > 8) {
     cdk.Tags.of(stack).add(
-      TAG.BUILD_HEX,
+      CDK.TAG.BUILD_HEX,
       process.env.PROJECT_COMMIT.slice(0, 8),
     );
   }
-  cdk.Tags.of(stack).add(TAG.BUILD_DATE, new Date().toISOString());
-  cdk.Tags.of(stack).add(TAG.BUILD_TIME, Date.now().toString());
+  cdk.Tags.of(stack).add(CDK.TAG.BUILD_DATE, new Date().toISOString());
+  cdk.Tags.of(stack).add(CDK.TAG.BUILD_TIME, Date.now().toString());
   if (process.env.PROJECT_COMMIT)
-    cdk.Tags.of(stack).add(TAG.COMMIT, process.env.PROJECT_COMMIT);
-  cdk.Tags.of(stack).add(TAG.CREATION, CDK.CREATION.CDK);
+    cdk.Tags.of(stack).add(CDK.TAG.COMMIT, process.env.PROJECT_COMMIT);
+  cdk.Tags.of(stack).add(CDK.TAG.CREATION, CDK.CREATION.CDK);
   if (process.env.PROJECT_ENV)
-    cdk.Tags.of(stack).add(TAG.ENV, process.env.PROJECT_ENV);
+    cdk.Tags.of(stack).add(CDK.TAG.ENV, process.env.PROJECT_ENV);
   if (process.env.PROJECT_NONCE)
-    cdk.Tags.of(stack).add(TAG.NONCE, process.env.PROJECT_NONCE);
+    cdk.Tags.of(stack).add(CDK.TAG.NONCE, process.env.PROJECT_NONCE);
   if (process.env.PROJECT_KEY)
-    cdk.Tags.of(stack).add(TAG.PROJECT, process.env.PROJECT_KEY);
-  cdk.Tags.of(stack).add(TAG.ROLE, CDK.ROLE.STACK);
+    cdk.Tags.of(stack).add(CDK.TAG.PROJECT, process.env.PROJECT_KEY);
+  cdk.Tags.of(stack).add(CDK.TAG.ROLE, CDK.ROLE.STACK);
   if (process.env.PROJECT_SERVICE)
-    cdk.Tags.of(stack).add(TAG.SERVICE, process.env.PROJECT_SERVICE);
+    cdk.Tags.of(stack).add(CDK.TAG.SERVICE, process.env.PROJECT_SERVICE);
   if (process.env.PROJECT_SPONSOR)
-    cdk.Tags.of(stack).add(TAG.SPONSOR, process.env.PROJECT_SPONSOR);
-  if (stackName) cdk.Tags.of(stack).add(TAG.STACK, stackName);
-  cdk.Tags.of(stack).add(TAG.VERSION, version);
+    cdk.Tags.of(stack).add(CDK.TAG.SPONSOR, process.env.PROJECT_SPONSOR);
+  if (stackName) cdk.Tags.of(stack).add(CDK.TAG.STACK, stackName);
+  cdk.Tags.of(stack).add(CDK.TAG.VERSION, version);
 
   return true;
 };

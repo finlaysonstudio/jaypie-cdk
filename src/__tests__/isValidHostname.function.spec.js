@@ -1,7 +1,4 @@
-import { describe, expect, it } from "vitest";
-
-// Subject
-import isValidHostname from "../isValidHostname.function.js";
+const isValidHostname = require("../isValidHostname.function.js");
 
 //
 //

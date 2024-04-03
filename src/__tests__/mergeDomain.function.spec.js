@@ -1,8 +1,7 @@
-import { describe, expect, it } from "vitest";
-import { CDK } from "@jaypie/core";
+const { CDK } = require("../constants.js");
 
 // Subject
-import mergeDomain from "../mergeDomain.function.js";
+const mergeDomain = require("../mergeDomain.function.js");
 
 //
 //

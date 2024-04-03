@@ -1,4 +1,4 @@
-export const CDK = {
+const CDK = {
   ACCOUNT: {
     DEVELOPMENT: "development",
     MANAGEMENT: "management",
@@ -88,4 +88,8 @@ export const CDK = {
     VENDOR: "vendor",
     VERSION: "version",
   },
+};
+
+module.exports = {
+  CDK,
 };

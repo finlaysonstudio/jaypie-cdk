@@ -1,4 +1,4 @@
-export default ({ CfnOutput, output, stack } = {}) => {
+module.exports = ({ CfnOutput, output, stack } = {}) => {
   try {
     Object.keys(output).forEach((key) => {
       const value = output[key];

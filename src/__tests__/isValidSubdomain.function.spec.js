@@ -1,8 +1,7 @@
-import { describe, expect, it } from "vitest";
-import { CDK } from "@jaypie/core";
+const { CDK } = require("../constants.js");
 
 // Subject
-import isValidSubdomain from "../isValidSubdomain.function.js";
+const isValidSubdomain = require("../isValidSubdomain.function.js");
 
 //
 //

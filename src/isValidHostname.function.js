@@ -11,7 +11,7 @@ function validPart(part) {
   return /^[a-zA-Z0-9-]+$/.test(part);
 }
 
-export default (hostname) => {
+module.exports = (hostname) => {
   // Check hostname is a string
   if (typeof hostname !== "string") return false;
 

@@ -1,4 +1,4 @@
-import { CDK } from "@jaypie/core";
+const { CDK } = require("./constants.js");
 
 function validPart(part) {
   if (!part.match(/^[a-z]/)) return false;
@@ -6,7 +6,7 @@ function validPart(part) {
   return /^[a-zA-Z0-9-]+$/.test(part);
 }
 
-export default (subdomain) => {
+module.exports = (subdomain) => {
   // Check subdomain is a string
   if (typeof subdomain !== "string") return false;
 

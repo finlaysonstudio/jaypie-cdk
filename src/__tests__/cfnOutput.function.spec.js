@@ -1,8 +1,5 @@
-// eslint-disable-next-line no-unused-vars
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-
 // Subject
-import cfnOutput from "../cfnOutput.function.js";
+const cfnOutput = require("../cfnOutput.function.js");
 
 //
 //
