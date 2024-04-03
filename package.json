@@ -15,6 +15,7 @@
     "new": "hygen jaypie vite",
     "test": "vitest",
     "test:spec:cfnOutput.function": "vitest run ./src/__tests__/cfnOutput.function.spec.js",
+    "test:spec:constants": "vitest run ./src/__tests__/constants.spec.js",
     "test:spec:index": "vitest run ./src/__tests__/index.spec.js",
     "test:spec:isValidHostname.function": "vitest run ./src/__tests__/isValidHostname.function.spec.js",
     "test:spec:isValidSubdomain.function": "vitest run ./src/__tests__/isValidSubdomain.function.spec.js",
