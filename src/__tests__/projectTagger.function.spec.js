@@ -79,7 +79,7 @@ describe("ProjectTagger Function", () => {
       });
     } catch (error) {
       // eslint-disable-next-line jest/no-conditional-expect
-      expect(error).toBeJaypieError();
+      expect(error.isProjectError).toBeTrue();
     }
     expect.assertions(1);
   });
@@ -91,7 +91,7 @@ describe("ProjectTagger Function", () => {
       });
     } catch (error) {
       // eslint-disable-next-line jest/no-conditional-expect
-      expect(error).toBeJaypieError();
+      expect(error.isProjectError).toBeTrue();
     }
     expect.assertions(1);
   });
