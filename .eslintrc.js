@@ -29,6 +29,12 @@ module.exports = {
     "import/extensions": ["error", "ignorePackages"],
     "import/no-unresolved": ["error", { commonjs: true, caseSensitive: true }],
     "no-console": "warn",
-    "no-restricted-syntax": ["error", "ImportDeclaration"],
+    "no-restricted-syntax": [
+      "error",
+      "ExportNamedDeclaration",
+      "ExportDefaultDeclaration",
+      "ExportAllDeclaration",
+      "ImportDeclaration",
+    ],
   },
 };
