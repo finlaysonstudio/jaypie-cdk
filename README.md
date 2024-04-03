@@ -4,12 +4,12 @@ AWS CDK utilities for Jaypie
 
 ## 📋 Usage
 
-`@jaypie/cdk` is an optional package that should be installed alongside the main `jaypie` package.
+`@jaypie/cdk` is a CommonJS package that is compatible with the AWS CDK libraries. Unlike other Jaypie packages, `@jaypie/cdk` should not be installed alongside `jaypie`.
 
 ### Installation
 
 ```bash
-npm install jaypie @jaypie/cdk
+npm install @jaypie/cdk
 ```
 
 ### Example
