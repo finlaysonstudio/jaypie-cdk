@@ -1,7 +1,7 @@
 const { CDK } = require("./constants.js");
 const { ConfigurationError } = require("@knowdev/errors");
 
-export default ({ cdk, stack, stackName } = {}) => {
+module.exports = ({ cdk, stack, stackName } = {}) => {
   if (!cdk) {
     throw new ConfigurationError("projectTagger `cdk` is required");
   }
