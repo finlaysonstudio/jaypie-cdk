@@ -1,6 +1,20 @@
+const { CDK } = require("./constants.js");
+const cfnOutput = require("./cfnOutput.function.js");
+const isValidHostname = require("./isValidHostname.function.js");
+const isValidSubdomain = require("./isValidSubdomain.function.js");
+const mergeDomain = require("./mergeDomain.function.js");
+const projectTagger = require("./projectTagger.function.js");
+
 //
 //
 // Export
 //
 
-export default {};
+module.exports = {
+  CDK,
+  cfnOutput,
+  isValidHostname,
+  isValidSubdomain,
+  mergeDomain,
+  projectTagger,
+};
