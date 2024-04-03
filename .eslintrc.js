@@ -12,17 +12,11 @@ module.exports = {
   overrides: [
     {
       files: ["__tests__/**", "**/*.spec.js", "**/*.test.js"],
-      plugins: ["vitest"],
-      extends: ["plugin:vitest/recommended"],
+      plugins: ["jest"],
+      extends: ["plugin:jest/recommended"],
       rules: {
-        "vitest/no-focused-tests": "error",
-        "vitest/no-disabled-tests": "warn",
-      },
-    },
-    {
-      files: ["*.cjs"],
-      rules: {
-        "import/no-commonjs": "off",
+        "jest/no-focused-tests": "error",
+        "jest/no-disabled-tests": "warn",
       },
     },
   ],
@@ -34,5 +28,6 @@ module.exports = {
   rules: {
     "import/extensions": ["error", "ignorePackages"],
     "no-console": "warn",
+    "no-restricted-syntax": ["error", "ImportDeclaration"]
   },
 };
