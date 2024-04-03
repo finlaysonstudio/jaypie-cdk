@@ -5,7 +5,7 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:import/errors",
+    "plugin:import/recommended",
     // "Add plugin:prettier/recommended as the last item in the extends array in your .eslintrc* config file, so that eslint-config-prettier has the opportunity to override other configs"
     "plugin:prettier/recommended",
   ],
@@ -27,7 +27,8 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "import/extensions": ["error", "ignorePackages"],
+    "import/no-unresolved": ["error", { commonjs: true, caseSensitive: true }],
     "no-console": "warn",
-    "no-restricted-syntax": ["error", "ImportDeclaration"]
+    "no-restricted-syntax": ["error", "ImportDeclaration"],
   },
 };
