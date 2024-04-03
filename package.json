@@ -20,7 +20,9 @@
     "test:spec:projectTagger.function": "jest ./src/__tests__/projectTagger.function.spec.js"
   },
   "dependencies": {
-    "@jaypie/core": "^1.0.2"
+    "@jaypie/core": "^1.0.2",
+    "@knowdev/errors": "^2.0.4",
+    "@knowdev/log": "^1.0.2"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
