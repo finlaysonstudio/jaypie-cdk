@@ -1,7 +1,6 @@
 module.exports = {
   root: true,
   env: {
-    es6: true,
     node: true,
   },
   extends: [
@@ -34,7 +33,6 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "import/extensions": ["error", "ignorePackages"],
-    "import/no-commonjs": "error",
     "no-console": "warn",
   },
 };
