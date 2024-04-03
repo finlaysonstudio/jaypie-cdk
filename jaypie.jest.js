@@ -1,4 +1,4 @@
-global.jest.expect.extend({
+global.expect.extend({
   isJaypieError(received) {
     const pass = received instanceof Error && received.isProjectError === true;
 
