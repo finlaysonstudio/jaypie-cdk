@@ -1,6 +1,6 @@
 {
   "name": "@jaypie/cdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Finlayson Studio",
   "main": "src/index.js",
   "scripts": {
