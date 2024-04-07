@@ -64,6 +64,7 @@ const CDK = {
     TOY: "toy",
   },
   SERVICE: {
+    DATADOG: "datadog",
     INFRASTRUCTURE: "infrastructure",
     LIBRARIES: "libraries",
     NONE: "none",
