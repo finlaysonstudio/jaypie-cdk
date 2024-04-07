@@ -88,6 +88,9 @@ const CDK = {
     VENDOR: "vendor",
     VERSION: "version",
   },
+  VENDOR: {
+    DATADOG: "datadog",
+  },
 };
 
 module.exports = {
