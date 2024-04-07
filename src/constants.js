@@ -42,6 +42,9 @@ const CDK = {
     APEX: "@",
   },
   IMPORT: {
+    DATADOG_LOG_FORWARDER: "account-datadog-forwarder",
+    DATADOG_ROLE: "account-datadog-role",
+    LOG_BUCKET: "account-log-bucket",
     OIDC_PROVIDER: "github-oidc-provider",
   },
   LAMBDA: {
