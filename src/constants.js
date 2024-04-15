@@ -32,10 +32,15 @@ const CDK = {
     LAMBDA_WORKER: 120,
   },
   ENV: {
+    DEMO: "demo", // Mirror of production
     LOCAL: "local",
     MAIN: "main",
-    META: "meta",
+    META: "meta", // For non-environment/infrastructure stacks
+    PREVIEW: "preview", // External next thing to be released
     PRODUCTION: "production",
+    TRAINING: "training", // aka test; mirror of production
+    RELEASE: "release", // Internal next thing to be released
+    REVIEW: "review", // Internal place to collaborate on issues
     SANDBOX: "sandbox",
   },
   HOST: {
