@@ -1,4 +1,4 @@
 module.exports = {
-  modulePathIgnorePatterns: ["cdk.out"],
+  modulePathIgnorePatterns: ["cdk.out", "dist"],
   setupFilesAfterEnv: ["jest-extended/all"],
 };
