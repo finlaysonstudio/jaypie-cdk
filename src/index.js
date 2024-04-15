@@ -1,3 +1,18 @@
+const {
+  BadGatewayError,
+  ConfigurationError,
+  GatewayTimeoutError,
+  IllogicalError,
+  InternalError,
+  MultiError,
+  NotImplementedError,
+  ProjectError,
+  ProjectMultiError,
+  UnavailableError,
+  UnhandledError,
+  UnreachableCodeError,
+} = require("@jaypie/core");
+
 const { CDK } = require("./constants.js");
 const cfnOutput = require("./cfnOutput.function.js");
 const isValidHostname = require("./isValidHostname.function.js");
@@ -17,4 +32,16 @@ module.exports = {
   isValidSubdomain,
   mergeDomain,
   projectTagger,
+  BadGatewayError,
+  ConfigurationError,
+  GatewayTimeoutError,
+  IllogicalError,
+  InternalError,
+  MultiError,
+  NotImplementedError,
+  ProjectError,
+  ProjectMultiError,
+  UnavailableError,
+  UnhandledError,
+  UnreachableCodeError,
 };
