@@ -1,16 +1,15 @@
 const { CDK } = require("./constants.js");
-const { ConfigurationError } = require("@knowdev/errors");
-const { moduleLogger } = require("@knowdev/log");
+const { ConfigurationError, log } = require("@jaypie/core");
 
 function mergeDomain(subDomain, hostedZone) {
   if (!hostedZone) {
     throw new ConfigurationError("hostedZone is required");
   }
   if (!subDomain) {
-    moduleLogger
-      .with({ lib: "@jaypie/cdk" })
+    log
+      .lib({ lib: "@jaypie/cdk" })
       .warn(
-        "subDomain not passed, returning hostedZone. Pass CDK.HOST.APEX to surpress this message",
+        "subDomain not passed, returning hostedZone. Pass CDK.HOST.APEX to suppress this message",
       );
     return hostedZone;
   }
