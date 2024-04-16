@@ -2,23 +2,14 @@
   "name": "@jaypie/cdk",
   "version": "1.0.11",
   "author": "Finlayson Studio",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    }
-  },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "build": "babel src --out-dir dist/esm --extensions \".js\" --config-file ./babel.esm.config.json && babel src --out-dir dist/cjs --extensions \".js\" --config-file ./babel.cjs.config.json",
     "format": "npm run format:package && npm run format:lint",
     "format:lint": "eslint --fix .",
     "format:package": "sort-package-json ./package.json",
     "init:deploy": "hygen jaypie workflow-npm",
     "lint": "eslint .",
     "new": "hygen jaypie vite",
-    "prepublish": "npm run build",
     "test": "jest .",
     "test:spec:cfnOutput.function": "jest ./src/__tests__/cfnOutput.function.spec.js",
     "test:spec:constants": "jest ./src/__tests__/constants.spec.js",
@@ -32,10 +23,6 @@
     "@jaypie/core": "^1.0.16"
   },
   "devDependencies": {
-    "@babel/cli": "^7.24.1",
-    "@babel/core": "^7.24.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
-    "@babel/preset-env": "^7.24.4",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
