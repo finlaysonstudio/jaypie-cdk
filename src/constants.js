@@ -49,6 +49,7 @@ const CDK = {
   IMPORT: {
     DATADOG_LOG_FORWARDER: "account-datadog-forwarder",
     DATADOG_ROLE: "account-datadog-role",
+    DATADOG_SECRET: "account-datadog-secret",
     LOG_BUCKET: "account-log-bucket",
     OIDC_PROVIDER: "github-oidc-provider",
   },
