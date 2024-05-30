@@ -18,7 +18,7 @@ module.exports = {
         "jest/no-focused-tests": "error",
         "jest/no-disabled-tests": "warn",
       },
-    }
+    },
   ],
   parserOptions: {
     ecmaVersion: "latest",
