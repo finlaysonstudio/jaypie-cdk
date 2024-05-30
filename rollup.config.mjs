@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import autoExternal from "rollup-plugin-auto-external";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
