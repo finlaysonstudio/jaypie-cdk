@@ -1,22 +1,29 @@
 module.exports = {
   root: true,
   env: {
+    es6: true,
     node: true,
   },
   extends: [
     "eslint:recommended",
-    "plugin:import/recommended",
+    "plugin:import/errors",
     // "Add plugin:prettier/recommended as the last item in the extends array in your .eslintrc* config file, so that eslint-config-prettier has the opportunity to override other configs"
     "plugin:prettier/recommended",
   ],
   overrides: [
     {
       files: ["__tests__/**", "**/*.spec.js", "**/*.test.js"],
-      plugins: ["jest"],
-      extends: ["plugin:jest/recommended"],
+      plugins: ["vitest"],
+      extends: ["plugin:vitest/recommended"],
       rules: {
-        "jest/no-focused-tests": "error",
-        "jest/no-disabled-tests": "warn",
+        "vitest/no-focused-tests": "error",
+        "vitest/no-disabled-tests": "warn",
+      },
+    },
+    {
+      files: ["*.cjs"],
+      rules: {
+        "import/no-commonjs": "off",
       },
     },
   ],
@@ -27,14 +34,7 @@ module.exports = {
   plugins: ["prettier"],
   rules: {
     "import/extensions": ["error", "ignorePackages"],
-    "import/no-unresolved": ["error", { commonjs: true, caseSensitive: true }],
+    "import/no-commonjs": "error",
     "no-console": "warn",
-    "no-restricted-syntax": [
-      "error",
-      "ExportNamedDeclaration",
-      "ExportDefaultDeclaration",
-      "ExportAllDeclaration",
-      "ImportDeclaration",
-    ],
   },
 };
