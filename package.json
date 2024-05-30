@@ -2,16 +2,14 @@
   "name": "@jaypie/cdk",
   "version": "1.0.18",
   "author": "Finlayson Studio",
-  "main": "dist/cjs/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "build": "rollup --config",
     "format": "npm run format:package && npm run format:lint",
     "format:lint": "eslint --fix .",
     "format:package": "sort-package-json ./package.json",
     "init:deploy": "hygen jaypie workflow-npm",
     "lint": "eslint .",
     "new": "hygen jaypie vite",
-    "prepublish": "npm run build",
     "test": "jest .",
     "test:spec:cfnOutput.function": "jest ./src/__tests__/cfnOutput.function.spec.js",
     "test:spec:constants": "jest ./src/__tests__/constants.spec.js",
@@ -25,8 +23,6 @@
     "@jaypie/core": "^1.0.34"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.8",
-    "@rollup/plugin-node-resolve": "^15.2.3",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.29.1",
@@ -36,7 +32,6 @@
     "jest": "^29.7.0",
     "jest-extended": "^4.0.2",
     "prettier": "^3.2.5",
-    "rollup": "^4.18.0",
     "sort-package-json": "^2.10.0"
   }
 }
