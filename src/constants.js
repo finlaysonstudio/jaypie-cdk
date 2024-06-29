@@ -24,6 +24,14 @@ const CDK = {
     CLOUDFORMATION_TEMPLATE: "template",
     MANUAL: "manual",
   },
+  DATADOG: {
+    SITE: "datadoghq.com",
+    LAYER: {
+      // https://docs.datadoghq.com/serverless/aws_lambda/installation/nodejs/?tab=awscdk
+      NODE: 112, // 112 on 6/28/2024
+      EXTENSION: 58, // 58 on 6/28/2024
+    },
+  },
   DEFAULT: {
     REGION: "us-east-1",
   },
