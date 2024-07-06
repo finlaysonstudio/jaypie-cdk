@@ -44,13 +44,14 @@ const CDK = {
   },
   ENV: {
     DEMO: "demo", // Mirror of production
+    DEVELOPMENT: "development", // Internal most stable development space
     EPHEMERAL: "ephemeral", // Temporary builds using sandbox resources
     LOCAL: "local",
-    MAIN: "main",
+    MAIN: "main", // Alias for development. Deprecate?
     META: "meta", // For non-environment/infrastructure stacks
     PREVIEW: "preview", // External next thing to be released
     PRODUCTION: "production",
-    TRAINING: "training", // aka test; mirror of production
+    TRAINING: "training", // aka "test"; mirror of production for external audiences
     RELEASE: "release", // Internal next thing to be released
     REVIEW: "review", // Internal place to collaborate on issues
     SANDBOX: "sandbox", // Internal build space with no guaranteed longevity
