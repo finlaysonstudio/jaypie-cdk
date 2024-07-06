@@ -17,6 +17,9 @@ const CDK = {
       WEB: "web",
     },
     EPHEMERAL: "ephemeral",
+    /**
+     * @deprecated as even "ephemeral" builds have static assets (since 7/6/2024)
+     */
     STATIC: "static",
   },
   CREATION: {
@@ -41,6 +44,7 @@ const CDK = {
   },
   ENV: {
     DEMO: "demo", // Mirror of production
+    EPHEMERAL: "ephemeral", // Temporary builds using sandbox resources
     LOCAL: "local",
     MAIN: "main",
     META: "meta", // For non-environment/infrastructure stacks
@@ -49,7 +53,7 @@ const CDK = {
     TRAINING: "training", // aka test; mirror of production
     RELEASE: "release", // Internal next thing to be released
     REVIEW: "review", // Internal place to collaborate on issues
-    SANDBOX: "sandbox",
+    SANDBOX: "sandbox", // Internal build space with no guaranteed longevity
   },
   HOST: {
     APEX: "@",
