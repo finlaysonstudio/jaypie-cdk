@@ -9,7 +9,7 @@ module.exports = ({ cdk, stack, stackName } = {}) => {
     throw new ConfigurationError("projectTagger `stack` is required");
   }
   const version =
-    process.env.npm_package_version || process.env.PROJECT_VERSION || "v???";
+    process.env.npm_package_version || process.env.PROJECT_VERSION || null;
 
   if (process.env.PROJECT_COMMIT && process.env.PROJECT_COMMIT.length > 8) {
     cdk.Tags.of(stack).add(
@@ -34,7 +34,7 @@ module.exports = ({ cdk, stack, stackName } = {}) => {
   if (process.env.PROJECT_SPONSOR)
     cdk.Tags.of(stack).add(CDK.TAG.SPONSOR, process.env.PROJECT_SPONSOR);
   if (stackName) cdk.Tags.of(stack).add(CDK.TAG.STACK, stackName);
-  cdk.Tags.of(stack).add(CDK.TAG.VERSION, version);
+  if (version) cdk.Tags.of(stack).add(CDK.TAG.VENDOR, version);
 
   return true;
 };
