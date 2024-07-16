@@ -47,7 +47,7 @@ const CDK = {
     DEVELOPMENT: "development", // Internal most stable development space
     EPHEMERAL: "ephemeral", // Temporary builds using sandbox resources
     LOCAL: "local",
-    MAIN: "main", // Alias for development. Deprecate?
+    /** @deprecated */ MAIN: "main", // Alias for development
     META: "meta", // For non-environment/infrastructure stacks
     PREVIEW: "preview", // External next thing to be released
     PRODUCTION: "production",
